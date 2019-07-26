@@ -1,0 +1,1137 @@
+(base) Winstons-Air:BuildWeek wel51x$ git clone https://github.com/wel51x/Intro-Django
+Cloning into 'Intro-Django'...
+remote: Enumerating objects: 167, done.
+remote: Total 167 (delta 0), reused 0 (delta 0), pack-reused 167
+Receiving objects: 100% (167/167), 53.81 KiB | 314.00 KiB/s, done.
+Resolving deltas: 100% (81/81), done.
+(base) Winstons-Air:BuildWeek wel51x$ ls -ls
+total 0
+0 drwxr-xr-x  6 wel51x  staff  192 Jul 26 16:49 Intro-Django
+(base) Winstons-Air:BuildWeek wel51x$ cd *
+(base) Winstons-Air:Intro-Django wel51x$ pipenv --three
+Creating a virtualenv for this project…
+Pipfile: /Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/Pipfile
+Using /Library/Frameworks/Python.framework/Versions/3.7/bin/python3 (3.7.3) to create virtualenv…
+⠸ Creating virtual environment...Already using interpreter /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+Using base prefix '/Library/Frameworks/Python.framework/Versions/3.7'
+New python executable in /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/python3
+Also creating executable in /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/python
+Installing setuptools, pip, wheel...
+done.
+Running virtualenv with interpreter /Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+
+✔ Successfully created virtual environment! 
+Virtualenv location: /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY
+Creating a Pipfile for this project…
+(base) Winstons-Air:Intro-Django wel51x$ cd /Users/wel51x/.local/share/virtualenvs
+(base) Winstons-Air:virtualenvs wel51x$ ls -ls
+total 0
+0 drwxr-xr-x   7 wel51x  staff  224 Jul 26 16:51 Intro-Django-bfahAMFY
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 18 11:34 ItsOver9000-DS-FxN_-JK-
+0 drwxr-xr-x  10 wel51x  staff  320 Apr 10 11:06 MyTwit-h_4Ngz70
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 12 09:14 SprintChallenge-VuHksv_k
+0 drwxr-xr-x   8 wel51x  staff  256 Mar 18 12:03 lambdata-TmC0ecs1
+(base) Winstons-Air:virtualenvs wel51x$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(base) Winstons-Air:Intro-Django wel51x$ pipenv install
+Pipfile.lock not found, creating…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Updated Pipfile.lock (a65489)!
+Installing dependencies from Pipfile.lock (a65489)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ pipenv install django
+Installing django…
+Adding django to Pipfile's [packages]…
+✔ Installation Succeeded 
+Pipfile.lock (4f9dd2) out of date, updating to (a65489)…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+✔ Success! 
+Updated Pipfile.lock (4f9dd2)!
+Installing dependencies from Pipfile.lock (4f9dd2)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 3/3 — 00:00:02
+(Intro-Django) bash-3.2$ django-admin startproject djorg .
+(Intro-Django) bash-3.2$ django-admin startapp notes
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+July 26, 2019 - 21:55:44
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(Intro-Django) bash-3.2$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying sessions.0001_initial... OK
+(Intro-Django) bash-3.2$ ./manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+ [X] 0010_alter_group_name_max_length
+ [X] 0011_update_proxy_permissions
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+sessions
+ [X] 0001_initial
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+(Intro-Django) bash-3.2$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ ls -ls
+total 288
+  8 -rw-r--r--  1 wel51x  staff     151 Jul 26 16:54 Pipfile
+  8 -rw-r--r--  1 wel51x  staff    1339 Jul 26 16:54 Pipfile.lock
+  8 -rw-r--r--  1 wel51x  staff    1115 Jul 26 16:49 README.md
+256 -rw-r--r--  1 wel51x  staff  131072 Jul 26 16:56 db.sqlite3
+  0 drwxr-xr-x  6 wel51x  staff     192 Jul 26 16:55 djorg
+  0 drwxr-xr-x  7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x  1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x  9 wel51x  staff     288 Jul 26 16:55 notes
+(Intro-Django) bash-3.2$ cd notes
+(Intro-Django) bash-3.2$ ls -ls
+total 40
+0 -rw-r--r--  1 wel51x  staff   0 Jul 26 16:55 __init__.py
+8 -rw-r--r--  1 wel51x  staff  63 Jul 26 16:55 admin.py
+8 -rw-r--r--  1 wel51x  staff  85 Jul 26 16:55 apps.py
+0 drwxr-xr-x  3 wel51x  staff  96 Jul 26 16:55 migrations
+8 -rw-r--r--  1 wel51x  staff  57 Jul 26 16:55 models.py
+8 -rw-r--r--  1 wel51x  staff  60 Jul 26 16:55 tests.py
+8 -rw-r--r--  1 wel51x  staff  63 Jul 26 16:55 views.py
+(Intro-Django) bash-3.2$ vi models.py
+(Intro-Django) bash-3.2$ vi models.py
+(Intro-Django) bash-3.2$ cd ..
+(Intro-Django) bash-3.2$ ls -lsa *
+  8 -rw-r--r--  1 wel51x  staff     151 Jul 26 16:54 Pipfile
+  8 -rw-r--r--  1 wel51x  staff    1339 Jul 26 16:54 Pipfile.lock
+  8 -rw-r--r--  1 wel51x  staff    1115 Jul 26 16:49 README.md
+256 -rw-r--r--  1 wel51x  staff  131072 Jul 26 16:56 db.sqlite3
+  8 -rwxr-xr-x  1 wel51x  staff     625 Jul 26 16:55 manage.py
+
+djorg:
+total 24
+0 drwxr-xr-x   6 wel51x  staff   192 Jul 26 16:55 .
+0 drwxr-xr-x  12 wel51x  staff   384 Jul 26 16:56 ..
+0 -rw-r--r--   1 wel51x  staff     0 Jul 26 16:55 __init__.py
+8 -rw-r--r--   1 wel51x  staff  3085 Jul 26 16:55 settings.py
+8 -rw-r--r--   1 wel51x  staff   747 Jul 26 16:55 urls.py
+8 -rw-r--r--   1 wel51x  staff   387 Jul 26 16:55 wsgi.py
+
+guides:
+total 72
+ 0 drwxr-xr-x   7 wel51x  staff   224 Jul 26 16:49 .
+ 0 drwxr-xr-x  12 wel51x  staff   384 Jul 26 16:56 ..
+24 -rw-r--r--   1 wel51x  staff  9932 Jul 26 16:49 day1.md
+16 -rw-r--r--   1 wel51x  staff  7007 Jul 26 16:49 day2.md
+16 -rw-r--r--   1 wel51x  staff  8133 Jul 26 16:49 day3.md
+ 8 -rw-r--r--   1 wel51x  staff  3584 Jul 26 16:49 day4.md
+ 8 -rw-r--r--   1 wel51x  staff  2059 Jul 26 16:49 trouble.md
+
+notes:
+total 40
+0 drwxr-xr-x   9 wel51x  staff  288 Jul 26 17:03 .
+0 drwxr-xr-x  12 wel51x  staff  384 Jul 26 16:56 ..
+0 -rw-r--r--   1 wel51x  staff    0 Jul 26 16:55 __init__.py
+8 -rw-r--r--   1 wel51x  staff   63 Jul 26 16:55 admin.py
+8 -rw-r--r--   1 wel51x  staff   85 Jul 26 16:55 apps.py
+0 drwxr-xr-x   3 wel51x  staff   96 Jul 26 16:55 migrations
+8 -rw-r--r--   1 wel51x  staff  269 Jul 26 17:03 models.py
+8 -rw-r--r--   1 wel51x  staff   60 Jul 26 16:55 tests.py
+8 -rw-r--r--   1 wel51x  staff   63 Jul 26 16:55 views.py
+(Intro-Django) bash-3.2$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ ls -ls
+total 288
+  8 -rw-r--r--  1 wel51x  staff     151 Jul 26 16:54 Pipfile
+  8 -rw-r--r--  1 wel51x  staff    1339 Jul 26 16:54 Pipfile.lock
+  8 -rw-r--r--  1 wel51x  staff    1115 Jul 26 16:49 README.md
+256 -rw-r--r--  1 wel51x  staff  131072 Jul 26 16:56 db.sqlite3
+  0 drwxr-xr-x  6 wel51x  staff     192 Jul 26 16:55 djorg
+  0 drwxr-xr-x  7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x  1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x  9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ ./manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+ [X] 0010_alter_group_name_max_length
+ [X] 0011_update_proxy_permissions
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+sessions
+ [X] 0001_initial
+(Intro-Django) bash-3.2$ cd djorg
+(Intro-Django) bash-3.2$ vi settings.py
+(Intro-Django) bash-3.2$ ./manage.py showmigrations
+bash: ./manage.py: No such file or directory
+(Intro-Django) bash-3.2$ cd ..
+(Intro-Django) bash-3.2$ ./manage.py showmigrations
+admin
+ [X] 0001_initial
+ [X] 0002_logentry_remove_auto_add
+ [X] 0003_logentry_add_action_flag_choices
+auth
+ [X] 0001_initial
+ [X] 0002_alter_permission_name_max_length
+ [X] 0003_alter_user_email_max_length
+ [X] 0004_alter_user_username_opts
+ [X] 0005_alter_user_last_login_null
+ [X] 0006_require_contenttypes_0002
+ [X] 0007_alter_validators_add_error_messages
+ [X] 0008_alter_user_username_max_length
+ [X] 0009_alter_user_last_name_max_length
+ [X] 0010_alter_group_name_max_length
+ [X] 0011_update_proxy_permissions
+contenttypes
+ [X] 0001_initial
+ [X] 0002_remove_content_type_name
+notes
+ (no migrations)
+sessions
+ [X] 0001_initial
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+(Intro-Django) bash-3.2$ manage.py makemigrations
+bash: manage.py: command not found
+(Intro-Django) bash-3.2$ ./manage.py makemigrations
+Migrations for 'notes':
+  notes/migrations/0001_initial.py
+    - Create model Note
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0001_initial... OK
+(Intro-Django) bash-3.2$ ./manage.py shell
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.models import Note
+>>> n = Note(title="firstNote", content="This is a test.")
+>>> n
+<Note: Note object (b474120f-9c22-4fdd-a758-16da8393151a)>
+>>> n.save()
+>>> ^D
+now exiting InteractiveConsole...
+(Intro-Django) bash-3.2$ ./manage.py shell
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.models import Note
+>>> b = Note.objects.all()
+>>> b
+<QuerySet [<Note: Note object (b474120f-9c22-4fdd-a758-16da8393151a)>]>
+>>> *b
+  File "<console>", line 1
+SyntaxError: can't use starred expression here
+>>> for i in b:
+... print (i)
+  File "<console>", line 2
+    print (i)
+        ^
+IndentationError: expected an indented block
+>>> for i in b:
+...     print(i)
+... 
+Note object (b474120f-9c22-4fdd-a758-16da8393151a)
+>>> for i in b:
+...     for j in i:
+...             print(j)
+... 
+Traceback (most recent call last):
+  File "<console>", line 2, in <module>
+TypeError: 'Note' object is not iterable
+>>> for i in b:
+...     print(*i)
+... 
+Traceback (most recent call last):
+  File "<console>", line 2, in <module>
+TypeError: print() argument after * must be an iterable, not Note
+>>> b.describe()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'describe'
+>>> for i in b:
+...     print(i.headline)
+... 
+Traceback (most recent call last):
+  File "<console>", line 2, in <module>
+AttributeError: 'Note' object has no attribute 'headline'
+>>> for i in b:
+...     print(i.title)
+... 
+firstNote
+>>> for i in b:
+...     print(i.title, i.content)
+... 
+firstNote This is a test.
+>>> for i in b:
+...     print(i.title, ":", i.content)
+... 
+firstNote : This is a test.
+>>> ^D
+now exiting InteractiveConsole...
+(Intro-Django) bash-3.2$ pipenv install python-decouple
+Installing python-decouple…
+Adding python-decouple to Pipfile's [packages]…
+✔ Installation Succeeded 
+Pipfile.lock (291a1f) out of date, updating to (4f9dd2)…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+✔ Success! 
+Updated Pipfile.lock (291a1f)!
+Installing dependencies from Pipfile.lock (291a1f)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 4/4 — 00:00:01
+(Intro-Django) bash-3.2$ cd djorg
+(Intro-Django) bash-3.2$ vi settings.py
+(Intro-Django) bash-3.2$ cd ..
+(Intro-Django) bash-3.2$ ls -lsa
+total 424
+  0 drwxr-xr-x  12 wel51x  staff     384 Jul 26 17:22 .
+  0 drwxr-xr-x   3 wel51x  staff      96 Jul 26 16:49 ..
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 16:49 .git
+  8 -rw-r--r--   1 wel51x  staff    1203 Jul 26 16:49 .gitignore
+  8 -rw-r--r--   1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  139264 Jul 26 17:14 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 26 17:24 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x   9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg
+(Intro-Django) bash-3.2$ ls -lsa
+total 24
+0 drwxr-xr-x   6 wel51x  staff   192 Jul 26 17:24 .
+0 drwxr-xr-x  12 wel51x  staff   384 Jul 26 17:22 ..
+0 -rw-r--r--   1 wel51x  staff     0 Jul 26 16:55 __init__.py
+8 -rw-r--r--   1 wel51x  staff  3098 Jul 26 17:11 settings.py
+8 -rw-r--r--   1 wel51x  staff   747 Jul 26 16:55 urls.py
+8 -rw-r--r--   1 wel51x  staff   387 Jul 26 16:55 wsgi.py
+(Intro-Django) bash-3.2$ git pull
+(Intro-Django) bash-3.2$ cd /Users/wel51x/.local/share/virtualenvs
+(Intro-Django) bash-3.2$ ls -ls
+total 0
+0 drwxr-xr-x   8 wel51x  staff  256 Jul 26 16:54 Intro-Django-bfahAMFY
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 18 11:34 ItsOver9000-DS-FxN_-JK-
+0 drwxr-xr-x  10 wel51x  staff  320 Apr 10 11:06 MyTwit-h_4Ngz70
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 12 09:14 SprintChallenge-VuHksv_k
+0 drwxr-xr-x   8 wel51x  staff  256 Mar 18 12:03 lambdata-TmC0ecs1
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg
+(Intro-Django) bash-3.2$ ls -lsa
+total 24
+0 drwxr-xr-x   6 wel51x  staff   192 Jul 26 17:24 .
+0 drwxr-xr-x  12 wel51x  staff   384 Jul 26 17:22 ..
+0 -rw-r--r--   1 wel51x  staff     0 Jul 26 16:55 __init__.py
+8 -rw-r--r--   1 wel51x  staff  3098 Jul 26 17:11 settings.py
+8 -rw-r--r--   1 wel51x  staff   747 Jul 26 16:55 urls.py
+8 -rw-r--r--   1 wel51x  staff   387 Jul 26 16:55 wsgi.py
+(Intro-Django) bash-3.2$ cd /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY
+(Intro-Django) bash-3.2$ ls -lsa
+total 8
+0 drwxr-xr-x   8 wel51x  staff  256 Jul 26 16:54 .
+0 drwxr-xr-x   7 wel51x  staff  224 Jul 26 16:51 ..
+0 lrwxr-xr-x   1 wel51x  staff   56 Jul 26 16:51 .Python -> /Library/Frameworks/Python.framework/Versions/3.7/Python
+8 -rw-r--r--   1 wel51x  staff   55 Jul 26 16:51 .project
+0 drwxr-xr-x  22 wel51x  staff  704 Jul 26 16:54 bin
+0 drwxr-xr-x   3 wel51x  staff   96 Jul 26 16:51 include
+0 drwxr-xr-x   3 wel51x  staff   96 Jul 26 16:51 lib
+0 drwxr-xr-x   2 wel51x  staff   64 Jul 26 16:54 src
+(Intro-Django) bash-3.2$ ls -lsa ..
+total 0
+0 drwxr-xr-x   7 wel51x  staff  224 Jul 26 16:51 .
+0 drwxr-xr-x   5 wel51x  staff  160 Jun 11 10:24 ..
+0 drwxr-xr-x   8 wel51x  staff  256 Jul 26 16:54 Intro-Django-bfahAMFY
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 18 11:34 ItsOver9000-DS-FxN_-JK-
+0 drwxr-xr-x  10 wel51x  staff  320 Apr 10 11:06 MyTwit-h_4Ngz70
+0 drwxr-xr-x   8 wel51x  staff  256 Apr 12 09:14 SprintChallenge-VuHksv_k
+0 drwxr-xr-x   8 wel51x  staff  256 Mar 18 12:03 lambdata-TmC0ecs1
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg
+(Intro-Django) bash-3.2$ cd ..
+(Intro-Django) bash-3.2$ ls -lsa
+total 424
+  0 drwxr-xr-x  12 wel51x  staff     384 Jul 26 17:22 .
+  0 drwxr-xr-x   3 wel51x  staff      96 Jul 26 16:49 ..
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 16:49 .git
+  8 -rw-r--r--   1 wel51x  staff    1203 Jul 26 16:49 .gitignore
+  8 -rw-r--r--   1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  139264 Jul 26 17:14 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 26 17:24 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x   9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ cd /Users/wel51x/.local/share/virtualenvs/MyTwit-h_4Ngz70
+(Intro-Django) bash-3.2$ ls -lsa
+total 8
+0 drwxr-xr-x  10 wel51x  staff   320 Apr 10 11:06 .
+0 drwxr-xr-x   7 wel51x  staff   224 Jul 26 16:51 ..
+0 lrwxr-xr-x   1 wel51x  staff    56 Apr  8 10:34 .Python -> /Library/Frameworks/Python.framework/Versions/3.7/Python
+8 -rw-r--r--   1 wel51x  staff    53 Apr  8 10:34 .project
+0 drwxr-xr-x  46 wel51x  staff  1472 Apr 11 11:20 bin
+0 drwxr-xr-x   3 wel51x  staff    96 Apr 10 11:06 etc
+0 drwxr-xr-x   3 wel51x  staff    96 Apr  8 10:34 include
+0 drwxr-xr-x   3 wel51x  staff    96 Apr  8 10:34 lib
+0 drwxr-xr-x   4 wel51x  staff   128 Apr 10 11:06 share
+0 drwxr-xr-x   2 wel51x  staff    64 Apr  8 10:34 src
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ ls -lsa
+total 424
+  0 drwxr-xr-x  12 wel51x  staff     384 Jul 26 17:22 .
+  0 drwxr-xr-x   3 wel51x  staff      96 Jul 26 16:49 ..
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 16:49 .git
+  8 -rw-r--r--   1 wel51x  staff    1203 Jul 26 16:49 .gitignore
+  8 -rw-r--r--   1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  139264 Jul 26 17:14 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 26 17:24 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x   9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ cat > .env
+SECRET_KEY = 'i1s5t5)=c^!oirvt)ut^g7j-u#k)2$*!_+y%7=6sv9@&t)#s1t'
+^C
+(Intro-Django) bash-3.2$ ls -lsa
+total 432
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 17:31 .
+  0 drwxr-xr-x   3 wel51x  staff      96 Jul 26 16:49 ..
+  8 -rw-r--r--   1 wel51x  staff      66 Jul 26 17:31 .env
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 16:49 .git
+  8 -rw-r--r--   1 wel51x  staff    1203 Jul 26 16:49 .gitignore
+  8 -rw-r--r--   1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  139264 Jul 26 17:14 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 26 17:24 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x   9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ cp /Users/wel51x/GDrive/Lambda/CS13/Data-Structures/.gitignore .
+(Intro-Django) bash-3.2$ cd djorg
+(Intro-Django) bash-3.2$ vi settings.py
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ grep env .gitignore
+# pyenv
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   having no cross-platform support, pipenv may install dependencies that don’t work, or not
+.env
+.venv
+env/
+venv/
+env.bak/
+venv.bak/
+(Intro-Django) bash-3.2$ grep env .gitignore
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg
+(Intro-Django) bash-3.2$ vi settings.py
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ vi .env
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Traceback (most recent call last):
+  File "./manage.py", line 21, in <module>
+    main()
+  File "./manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 325, in execute
+    settings.INSTALLED_APPS
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/conf/__init__.py", line 66, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/conf/__init__.py", line 157, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/settings.py", line 23, in <module>
+    SECRET_KEY = config('SECRET_KEY')
+NameError: name 'config' is not defined
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg
+(Intro-Django) bash-3.2$ vi settings.py
+(Intro-Django) bash-3.2$ cd -
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 22:39:06
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 22:39:39] "GET / HTTP/1.1" 200 16348
+[26/Jul/2019 22:39:39] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[26/Jul/2019 22:39:39] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[26/Jul/2019 22:39:39] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[26/Jul/2019 22:39:39] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+Not Found: /apple-touch-icon-precomposed.png
+[26/Jul/2019 22:39:39] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2034
+Not Found: /apple-touch-icon.png
+[26/Jul/2019 22:39:39] "GET /apple-touch-icon.png HTTP/1.1" 404 1998
+Not Found: /favicon.ico
+[26/Jul/2019 22:39:39] "GET /favicon.ico HTTP/1.1" 404 1971
+^C(Intro-Django) bash-3.2$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ ./manage.py createsuperuser
+Username (leave blank to use 'wel51x'): admin
+Email address: faluovo@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 22:57:54
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 22:58:08] "GET / HTTP/1.1" 200 16348
+[26/Jul/2019 22:58:08] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 22:58:08] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 22:58:08] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 22:58:08] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+^C(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 22:59:29
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 22:59:39] "GET / HTTP/1.1" 200 16348
+^C(Intro-Django) bash-3.2$ exit
+exit
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:00:17
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:00:33] "GET / HTTP/1.1" 200 16348
+[26/Jul/2019 23:01:43] "GET / HTTP/1.1" 200 16348
+[26/Jul/2019 23:01:43] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[26/Jul/2019 23:01:43] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[26/Jul/2019 23:01:43] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[26/Jul/2019 23:01:43] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+^C(Intro-Django) bash-3.2$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(Intro-Django) bash-3.2$ cd djorg
+(Intro-Django) bash-3.2$ cd ..
+(Intro-Django) bash-3.2$ ls -lsa
+total 432
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 17:57 .
+  0 drwxr-xr-x   3 wel51x  staff      96 Jul 26 16:49 ..
+  8 -rw-r--r--   1 wel51x  staff      79 Jul 26 17:36 .env
+  0 drwxr-xr-x  13 wel51x  staff     416 Jul 26 16:49 .git
+  8 -rw-r--r--   1 wel51x  staff    2968 Jul 26 17:32 .gitignore
+  8 -rw-r--r--   1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  139264 Jul 26 17:57 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 26 17:38 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x   9 wel51x  staff     288 Jul 26 17:03 notes
+(Intro-Django) bash-3.2$ vi notes/admin.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/notes/admin.py", line 2, in <module>
+    from .models import Note, PersonalNote
+ImportError: cannot import name 'PersonalNote' from 'notes.models' (/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/notes/models.py)
+
+^C(Intro-Django) bash-3.2$ vi notes/admin.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/notes/admin.py", line 5, in <module>
+    admin.site.register(Note, NoteAdmin)
+NameError: name 'NoteAdmin' is not defined
+
+^C(Intro-Django) bash-3.2$ vi notes/admin.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:08:59
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:09:13] "GET / HTTP/1.1" 200 16348
+[26/Jul/2019 23:09:13] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 23:09:13] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:09:13] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:09:13] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:09:18] "GET /admin HTTP/1.1" 301 0
+[26/Jul/2019 23:09:18] "GET /admin/ HTTP/1.1" 302 0
+[26/Jul/2019 23:09:18] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[26/Jul/2019 23:09:18] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[26/Jul/2019 23:09:18] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[26/Jul/2019 23:09:18] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+Not Found: /favicon.ico
+[26/Jul/2019 23:09:18] "GET /favicon.ico HTTP/1.1" 404 1971
+[26/Jul/2019 23:09:32] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[26/Jul/2019 23:09:32] "GET /admin/ HTTP/1.1" 200 3701
+[26/Jul/2019 23:09:32] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[26/Jul/2019 23:09:32] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[26/Jul/2019 23:09:32] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+Not Found: /favicon.ico
+[26/Jul/2019 23:09:32] "GET /favicon.ico HTTP/1.1" 404 1971
+^C(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:10:51
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:10:55] "GET /admin/ HTTP/1.1" 200 3701
+^C(Intro-Django) bash-3.2$ vi notes/models.py
+(Intro-Django) bash-3.2$ ./manage.py makemigrations
+You are trying to add the field 'created_at' with 'auto_now_add=True' to note without a default; the database needs something to populate existing rows.
+
+ 1) Provide a one-off default now (will be set on all existing rows)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+You can accept the default 'timezone.now' by pressing 'Enter' or you can provide another value.
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+[default: timezone.now] >>> 
+Migrations for 'notes':
+  notes/migrations/0002_auto_20190726_2313.py
+    - Add field created_at to note
+    - Add field last_modified to note
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0002_auto_20190726_2313... OK
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:14:09
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:14:19] "GET /admin/ HTTP/1.1" 200 3701
+[26/Jul/2019 23:14:22] "GET /admin/notes/note/ HTTP/1.1" 200 4419
+[26/Jul/2019 23:14:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:14:22] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[26/Jul/2019 23:14:22] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[26/Jul/2019 23:14:22] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[26/Jul/2019 23:14:22] "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+[26/Jul/2019 23:14:22] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[26/Jul/2019 23:14:22] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[26/Jul/2019 23:14:22] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[26/Jul/2019 23:14:22] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+[26/Jul/2019 23:14:22] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[26/Jul/2019 23:14:22] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+Not Found: /favicon.ico
+[26/Jul/2019 23:14:22] "GET /favicon.ico HTTP/1.1" 404 1971
+[26/Jul/2019 23:14:27] "GET /admin/notes/note/b474120f-9c22-4fdd-a758-16da8393151a/change/ HTTP/1.1" 200 4787
+[26/Jul/2019 23:14:27] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[26/Jul/2019 23:14:27] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[26/Jul/2019 23:14:27] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[26/Jul/2019 23:14:27] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:14:27] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+Not Found: /favicon.ico
+[26/Jul/2019 23:14:27] "GET /favicon.ico HTTP/1.1" 404 1971
+^C(Intro-Django) bash-3.2$ vi notes/admin.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:16:41
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:16:55] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /admin/ HTTP/1.1" 200 3701
+[26/Jul/2019 23:16:55] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:55] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:16:57] "GET /admin/notes/note/ HTTP/1.1" 200 4419
+[26/Jul/2019 23:16:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:16:59] "GET /admin/notes/note/b474120f-9c22-4fdd-a758-16da8393151a/change/ HTTP/1.1" 200 5631
+[26/Jul/2019 23:16:59] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+^C(Intro-Django) bash-3.2$ vi notes/models.py
+(Intro-Django) bash-3.2$ ./manage.py makemigrations
+Migrations for 'notes':
+  notes/migrations/0003_personalnote.py
+    - Create model PersonalNote
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0003_personalnote... OK
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:20:25
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:20:39] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:20:39] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:20:39] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[26/Jul/2019 23:20:39] "GET /admin/ HTTP/1.1" 200 3701
+[26/Jul/2019 23:20:39] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[26/Jul/2019 23:20:39] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:20:39] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:20:42] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:20:42] "GET /admin/notes/note/ HTTP/1.1" 200 4419
+[26/Jul/2019 23:20:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:20:44] "GET /admin/notes/note/b474120f-9c22-4fdd-a758-16da8393151a/change/ HTTP/1.1" 200 5631
+^C(Intro-Django) bash-3.2$ ./manage.py dbshell
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter ".help" for usage hints.
+sqlite> .tables
+auth_group                  django_admin_log          
+auth_group_permissions      django_content_type       
+auth_permission             django_migrations         
+auth_user                   django_session            
+auth_user_groups            notes_note                
+auth_user_user_permissions  notes_personalnote        
+sqlite> pragma table_info(notes_note)
+   ...> ;
+0|id|char(32)|1||1
+1|title|varchar(200)|1||0
+2|content|text|1||0
+3|created_at|datetime|1||0
+4|last_modified|datetime|1||0
+sqlite> pragma table_info(notes_personalnote);
+0|note_ptr_id|char(32)|1||1
+1|user_id|integer|1||0
+sqlite> .headers on
+sqlite> .mode column
+sqlite> pragma table_info(notes_personalnote);
+cid         name         type        notnull     dflt_value  pk        
+----------  -----------  ----------  ----------  ----------  ----------
+0           note_ptr_id  char(32)    1                       1         
+1           user_id      integer     1                       0         
+sqlite> pragma table_info(notes_note);
+cid         name        type        notnull     dflt_value  pk        
+----------  ----------  ----------  ----------  ----------  ----------
+0           id          char(32)    1                       1         
+1           title       varchar(20  1                       0         
+2           content     text        1                       0         
+3           created_at  datetime    1                       0         
+4           last_modif  datetime    1                       0         
+sqlite> SELECT * FROM notes_note;
+id                                title       content          created_at                  last_modified             
+--------------------------------  ----------  ---------------  --------------------------  --------------------------
+b474120f9c224fdda75816da8393151a  firstNote   This is a test.  2019-07-26 23:13:37.061276  2019-07-26 23:13:37.068949
+sqlite> ^D
+(Intro-Django) bash-3.2$ vi notes/admin.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:26:40
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:26:52] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /admin/ HTTP/1.1" 200 4161
+[26/Jul/2019 23:26:52] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:52] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /admin/notes/personalnote/ HTTP/1.1" 200 3212
+[26/Jul/2019 23:26:54] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:26:54] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:54] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[26/Jul/2019 23:26:54] "GET /favicon.ico HTTP/1.1" 404 1971
+[26/Jul/2019 23:26:58] "GET /admin/notes/personalnote/add/ HTTP/1.1" 200 5591
+[26/Jul/2019 23:26:58] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:58] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[26/Jul/2019 23:26:58] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[26/Jul/2019 23:26:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:26:58] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[26/Jul/2019 23:26:58] "GET /favicon.ico HTTP/1.1" 404 1971
+^C(Intro-Django) bash-3.2$ ./manage.py dbshell
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter ".help" for usage hints.
+sqlite> .headers on
+sqlite> .mode column
+sqlite> pragma table_info(notes_personalnote);
+cid         name         type        notnull     dflt_value  pk        
+----------  -----------  ----------  ----------  ----------  ----------
+0           note_ptr_id  char(32)    1                       1         
+1           user_id      integer     1                       0         
+sqlite> pragma table_info(notes_note)
+   ...> ;
+cid         name        type        notnull     dflt_value  pk        
+----------  ----------  ----------  ----------  ----------  ----------
+0           id          char(32)    1                       1         
+1           title       varchar(20  1                       0         
+2           content     text        1                       0         
+3           created_at  datetime    1                       0         
+4           last_modif  datetime    1                       0         
+sqlite> SELECT * FROM auth_user;
+id          password                                                                        last_login                  is_superuser  username    first_name  email              is_staff    is_active   date_joined                 last_name 
+----------  ------------------------------------------------------------------------------  --------------------------  ------------  ----------  ----------  -----------------  ----------  ----------  --------------------------  ----------
+1           pbkdf2_sha256$150000$JeILSQhvmja6$Q7fWCsBWWJE89SyOf0dAm7IH712GwUcInxGY9lLAz6Q=  2019-07-26 23:09:32.593602  1             admin                   faluovo@gmail.com  1           1           2019-07-26 22:57:24.248272            
+sqlite> Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 990, in wait
+    return self._wait(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1624, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1582, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./manage.py", line 21, in <module>
+    main()
+  File "./manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/dbshell.py", line 22, in handle
+    connection.client.runshell()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/client.py", line 12, in runshell
+    subprocess.check_call(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 342, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 325, in call
+    return p.wait(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1003, in wait
+    self._wait(timeout=sigint_timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1603, in _wait
+    if self._waitpid_lock.acquire(False):
+KeyboardInterrupt
+(Intro-Django) bash-3.2$ ./manage.py dbshell
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter ".help" for usage hints.
+sqlite> Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 990, in wait
+    return self._wait(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1624, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1582, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./manage.py", line 21, in <module>
+    main()
+  File "./manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/dbshell.py", line 22, in handle
+    connection.client.runshell()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/client.py", line 12, in runshell
+    subprocess.check_call(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 342, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 325, in call
+    return p.wait(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1003, in wait
+    self._wait(timeout=sigint_timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py", line 1603, in _wait
+    if self._waitpid_lock.acquire(False):
+KeyboardInterrupt
+(Intro-Django) bash-3.2$ ./manage.py dbshell
+SQLite version 3.26.0 2018-12-01 12:34:55
+Enter ".help" for usage hints.
+sqlite> ^D
+(Intro-Django) bash-3.2$ ./manage.py shell.
+Unknown command: 'shell.'. Did you mean shell?
+Type 'manage.py help' for usage.
+(Intro-Django) bash-3.2$ ./manage.py shell
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.models import PersonalNote
+>>> pn = PersonalNote.objects.all()
+>>> pn[0]
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+>>> pn[0].user
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 309, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+>>> ^D
+now exiting InteractiveConsole...
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 26, 2019 - 23:34:51
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[26/Jul/2019 23:35:03] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:35:03] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[26/Jul/2019 23:35:03] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:35:04] "GET /admin/ HTTP/1.1" 200 4161
+[26/Jul/2019 23:35:04] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[26/Jul/2019 23:35:04] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:35:04] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[26/Jul/2019 23:35:06] "GET /admin/notes/personalnote/ HTTP/1.1" 200 3212
+[26/Jul/2019 23:35:06] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:35:09] "GET /admin/notes/personalnote/add/ HTTP/1.1" 200 5591
+[26/Jul/2019 23:35:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:35:42] "POST /admin/notes/personalnote/add/ HTTP/1.1" 302 0
+[26/Jul/2019 23:35:42] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4793
+[26/Jul/2019 23:35:42] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:35:42] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[26/Jul/2019 23:35:53] "GET /admin/ HTTP/1.1" 200 4577
+[26/Jul/2019 23:35:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[26/Jul/2019 23:35:57] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4514
+[26/Jul/2019 23:35:58] "GET /admin/notes/personalnote/d6b1c326-8364-49a3-b727-6317a6bf9378/change/ HTTP/1.1" 200 5976
+[26/Jul/2019 23:35:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /favicon.ico
+[26/Jul/2019 23:35:58] "GET /favicon.ico HTTP/1.1" 404 1971
+^C(Intro-Django) bash-3.2$ ./manage.py shell
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.models import PersonalNote
+>>> pn = PersonalNote.objects.all()
+>>> pn[0]
+<PersonalNote: PersonalNote object (d6b1c326-8364-49a3-b727-6317a6bf9378)>
+>>> for i in pn:
+...     print(i.user_id)
+... 
+1
+>>>     print(i.username)
+  File "<console>", line 1
+    print(i.username)
+    ^
+IndentationError: unexpected indent
+>>> for i in pn:
+...     print(i.username)
+... 
+Traceback (most recent call last):
+  File "<console>", line 2, in <module>
+AttributeError: 'PersonalNote' object has no attribute 'username'
+>>> for i in pn:
+...     print(i.user_id, i.note_ptr_id)
+... 
+1 d6b1c326-8364-49a3-b727-6317a6bf9378
+>>> 
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> ^D
+now exiting InteractiveConsole...
+(Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(base) Winstons-Air:Intro-Django wel51x$ 
