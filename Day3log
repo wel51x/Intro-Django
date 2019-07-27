@@ -1,0 +1,1826 @@
+(base) Winstons-Air:Intro-Django wel51x$ pwd
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(base) Winstons-Air:Intro-Django wel51x$ ls -ls
+total 536
+120 -rw-r--r--  1 wel51x  staff   59661 Jul 26 18:51 Day1-Day2log
+  8 -rw-r--r--  1 wel51x  staff     173 Jul 26 17:22 Pipfile
+  8 -rw-r--r--  1 wel51x  staff    1568 Jul 26 17:22 Pipfile.lock
+  8 -rw-r--r--  1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--  1 wel51x  staff  151552 Jul 26 18:35 db.sqlite3
+  0 drwxr-xr-x  6 wel51x  staff     192 Jul 26 17:38 djorg
+  0 drwxr-xr-x  7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x  1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x  9 wel51x  staff     288 Jul 26 18:26 notes
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ pipenv install djangorestframework
+Installing djangorestframework…
+Adding djangorestframework to Pipfile's [packages]…
+✔ Installation Succeeded 
+Pipfile.lock (dc5bb9) out of date, updating to (291a1f)…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+✔ Success! 
+Updated Pipfile.lock (dc5bb9)!
+Installing dependencies from Pipfile.lock (dc5bb9)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 5/5 — 00:00:02
+(Intro-Django) bash-3.2$ vi djorg/settings.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/config.py", line 116, in create
+    mod = import_module(mod_path)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_frameworkdjango'
+
+^C(Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/apps/config.py", line 116, in create
+    mod = import_module(mod_path)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'rest_frameworkdjango'
+
+^C(Intro-Django) bash-3.2vi djorg/settings.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 20:24:20
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 20:24:53] "GET / HTTP/1.1" 200 16348
+[27/Jul/2019 20:24:53] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[27/Jul/2019 20:24:53] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[27/Jul/2019 20:24:53] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[27/Jul/2019 20:24:53] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[27/Jul/2019 20:24:58] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 20:24:58] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Jul/2019 20:24:58] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[27/Jul/2019 20:24:58] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[27/Jul/2019 20:24:58] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[27/Jul/2019 20:24:58] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[27/Jul/2019 20:25:00] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 20:25:05] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4514
+[27/Jul/2019 20:25:05] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[27/Jul/2019 20:25:05] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[27/Jul/2019 20:25:05] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:25:05] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[27/Jul/2019 20:25:05] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:05] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[27/Jul/2019 20:25:06] "GET /admin/notes/personalnote/d6b1c326-8364-49a3-b727-6317a6bf9378/change/ HTTP/1.1" 200 5976
+[27/Jul/2019 20:25:06] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[27/Jul/2019 20:25:06] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:06] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[27/Jul/2019 20:25:06] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[27/Jul/2019 20:25:06] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:25:18] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 20:25:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:25:20] "GET /admin/notes/note/b474120f-9c22-4fdd-a758-16da8393151a/change/ HTTP/1.1" 200 5631
+[27/Jul/2019 20:25:20] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:25:24] "GET /admin/notes/note/d6b1c326-8364-49a3-b727-6317a6bf9378/change/ HTTP/1.1" 200 5653
+[27/Jul/2019 20:25:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /favicon.ico
+[27/Jul/2019 20:25:25] "GET /favicon.ico HTTP/1.1" 404 1971
+[27/Jul/2019 20:25:30] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 20:25:32] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:25:32] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4514
+[27/Jul/2019 20:25:38] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 20:25:38] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 20:31:11
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 20:31:22] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 20:31:25] "GET /admin/auth/group/ HTTP/1.1" 200 3502
+[27/Jul/2019 20:31:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:31:25] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+Not Found: /favicon.ico
+[27/Jul/2019 20:31:25] "GET /favicon.ico HTTP/1.1" 404 1971
+[27/Jul/2019 20:31:31] "GET /admin/auth/user/ HTTP/1.1" 200 6611
+[27/Jul/2019 20:31:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:31:31] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[27/Jul/2019 20:31:31] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+Not Found: /favicon.ico
+[27/Jul/2019 20:31:31] "GET /favicon.ico HTTP/1.1" 404 1971
+[27/Jul/2019 20:31:36] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 20:31:36] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:31:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:31:39] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4514
+^C(Intro-Django) bash-3.2$ 
+(Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Pipfile
+	modified:   Pipfile.lock
+	modified:   djorg/settings.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	notes/api.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Winstons-Air:Intro-Django wel51x$ git add .
+(base) Winstons-Air:Intro-Django wel51x$ git commit -m "Day 3 Installing the REST Framework & Expose the PersonalNotes Model"
+[master e2ab216] Day 3 Installing the REST Framework & Expose the PersonalNotes Model
+ 4 files changed, 30 insertions(+), 1 deletion(-)
+ create mode 100644 notes/api.py
+(base) Winstons-Air:Intro-Django wel51x$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.13 KiB | 1.13 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/wel51x/Intro-Django
+   04f1084..e2ab216  master -> master
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ vi djorg/urls.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 20:38:29
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 20:38:44] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 20:39:20] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[27/Jul/2019 20:39:20] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[27/Jul/2019 20:39:20] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 20:39:26] "OPTIONS /api/ HTTP/1.1" 200 5608
+[27/Jul/2019 20:39:49] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 20:39:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:40:00] "GET /admin/auth/user/ HTTP/1.1" 200 6611
+[27/Jul/2019 20:40:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /admin/api
+[27/Jul/2019 20:40:02] "GET /admin/api HTTP/1.1" 404 4143
+Not Found: /favicon.ico
+[27/Jul/2019 20:40:02] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 20:40:14] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 20:40:15] "GET /api HTTP/1.1" 301 0
+[27/Jul/2019 20:40:15] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 20:40:19] "GET /api/notes/ HTTP/1.1" 200 9006
+Not Found: /favicon.ico
+[27/Jul/2019 20:40:19] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 20:40:27] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 20:40:27] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 20:40:31] "GET /admin/ HTTP/1.1" 200 4577
+^C(Intro-Django) bash-3.2vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/urls.py", line 20, in <module>
+    from notes.api import PersonalNoteViewSet
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/notes/api.py", line 10
+    def create(self, validated_data):
+                                    ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:00:47
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:01:19] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 21:01:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:29] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:01:31] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:01:31] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 21:01:37] "GET /api/notes/ HTTP/1.1" 200 9006
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:02:20] "POST /api/notes/ HTTP/1.1" 500 204546
+[27/Jul/2019 21:06:42] "GET /api/ HTTP/1.1" 200 5335
+^C(Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ ls -ls
+total 536
+120 -rw-r--r--   1 wel51x  staff   59661 Jul 26 18:51 Day1-Day2log
+  8 -rw-r--r--   1 wel51x  staff     199 Jul 27 15:15 Pipfile
+  8 -rw-r--r--   1 wel51x  staff    1895 Jul 27 15:15 Pipfile.lock
+  8 -rw-r--r--   1 wel51x  staff    1115 Jul 26 16:49 README.md
+384 -rw-r--r--   1 wel51x  staff  151552 Jul 26 18:35 db.sqlite3
+  0 drwxr-xr-x   6 wel51x  staff     192 Jul 27 15:38 djorg
+  0 drwxr-xr-x   7 wel51x  staff     224 Jul 26 16:49 guides
+  8 -rwxr-xr-x   1 wel51x  staff     625 Jul 26 16:55 manage.py
+  0 drwxr-xr-x  10 wel51x  staff     320 Jul 27 16:00 notes
+(base) Winstons-Air:Intro-Django wel51x$ ls -ls g*
+total 72
+24 -rw-r--r--  1 wel51x  staff  9932 Jul 26 16:49 day1.md
+16 -rw-r--r--  1 wel51x  staff  7007 Jul 26 16:49 day2.md
+16 -rw-r--r--  1 wel51x  staff  8133 Jul 26 16:49 day3.md
+ 8 -rw-r--r--  1 wel51x  staff  3584 Jul 26 16:49 day4.md
+ 8 -rw-r--r--  1 wel51x  staff  2059 Jul 26 16:49 trouble.md
+(base) Winstons-Air:Intro-Django wel51x$ vi g*/day1.md
+(base) Winstons-Air:Intro-Django wel51x$ vi g*/day3.md
+(base) Winstons-Air:Intro-Django wel51x$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   djorg/urls.py
+	modified:   guides/day1.md
+	modified:   guides/day3.md
+	modified:   notes/api.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Winstons-Air:Intro-Django wel51x$ git add .
+(base) Winstons-Air:Intro-Django wel51x$ git commit -m "Day 3 Add Routes, tried to debug but asshole Lambda doesn't say how"
+[master cc9625b] Day 3 Add Routes, tried to debug but asshole Lambda doesn't say how
+ 4 files changed, 14 insertions(+), 1 deletion(-)
+(base) Winstons-Air:Intro-Django wel51x$ git push
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.12 KiB | 574.00 KiB/s, done.
+Total 9 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To https://github.com/wel51x/Intro-Django
+   e2ab216..cc9625b  master -> master
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:16:19
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:16:28] "GET /api/notes/ HTTP/1.1" 200 9006
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:16:28] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:16:37] "POST /api/notes/ HTTP/1.1" 500 204476
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:17:16] "POST /api/notes/ HTTP/1.1" 500 204700
+[27/Jul/2019 21:17:37] "GET /admin/notes/note/ HTTP/1.1" 200 4750
+[27/Jul/2019 21:17:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:19:20
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:19:29] "GET /api/notes/ HTTP/1.1" 200 5476
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Jul/2019 21:19:30] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[27/Jul/2019 21:19:53] "GET /admin/ HTTP/1.1" 302 0
+[27/Jul/2019 21:19:53] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[27/Jul/2019 21:19:53] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[27/Jul/2019 21:19:53] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[27/Jul/2019 21:19:53] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[27/Jul/2019 21:19:53] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[27/Jul/2019 21:19:53] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[27/Jul/2019 21:19:53] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[27/Jul/2019 21:19:55] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[27/Jul/2019 21:19:55] "GET /admin/ HTTP/1.1" 200 4577
+[27/Jul/2019 21:19:55] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[27/Jul/2019 21:19:55] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[27/Jul/2019 21:19:55] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[27/Jul/2019 21:19:55] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[27/Jul/2019 21:19:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:19:58] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4514
+[27/Jul/2019 21:19:58] "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+[27/Jul/2019 21:19:58] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[27/Jul/2019 21:19:58] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[27/Jul/2019 21:19:58] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[27/Jul/2019 21:19:58] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[27/Jul/2019 21:19:58] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[27/Jul/2019 21:19:58] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[27/Jul/2019 21:19:58] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+[27/Jul/2019 21:19:58] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[27/Jul/2019 21:19:58] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[27/Jul/2019 21:20:03] "GET /admin/notes/personalnote/add/ HTTP/1.1" 200 5591
+[27/Jul/2019 21:20:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:20:03] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[27/Jul/2019 21:20:03] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[27/Jul/2019 21:20:03] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[27/Jul/2019 21:20:03] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[27/Jul/2019 21:20:39] "POST /admin/notes/personalnote/add/ HTTP/1.1" 200 5786
+[27/Jul/2019 21:20:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:20:46] "POST /admin/notes/personalnote/add/ HTTP/1.1" 302 0
+[27/Jul/2019 21:20:46] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5140
+[27/Jul/2019 21:20:46] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:20:46] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[27/Jul/2019 21:20:54] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4861
+[27/Jul/2019 21:20:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:21:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:21:00] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4861
+[27/Jul/2019 21:21:07] "GET /api/notes/ HTTP/1.1" 200 9145
+[27/Jul/2019 21:21:08] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:21:09] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:21:12] "GET /api/notes/ HTTP/1.1" 200 9145
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:21:50] "POST /api/notes/ HTTP/1.1" 500 204612
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ exit
+exit
+(base) Winstons-Air:Intro-Django wel51x$ logout
+Saving session...completed.
+Deleting expired sessions...1 completed.
+
+[Process completed]
+
+(Accidentally logged out)
+
+Last login: Thu Jul 18 11:56:47 on ttys000
+(base) Winstons-Air:Intro-Django wel51x$ cd -
+-bash: cd: OLDPWD not set
+(base) Winstons-Air:Intro-Django wel51x$ cd /Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:32:53
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:33:31] "GET /admin/ HTTP/1.1" 302 0
+[27/Jul/2019 21:33:31] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+[27/Jul/2019 21:33:31] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[27/Jul/2019 21:33:31] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[27/Jul/2019 21:33:31] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[27/Jul/2019 21:33:31] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[27/Jul/2019 21:33:31] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[27/Jul/2019 21:33:31] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[27/Jul/2019 21:33:33] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[27/Jul/2019 21:33:33] "GET /admin/ HTTP/1.1" 200 4960
+[27/Jul/2019 21:33:33] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[27/Jul/2019 21:33:33] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[27/Jul/2019 21:33:33] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[27/Jul/2019 21:33:33] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[27/Jul/2019 21:33:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:33:37] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4861
+[27/Jul/2019 21:33:37] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[27/Jul/2019 21:33:37] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[27/Jul/2019 21:33:37] "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+[27/Jul/2019 21:33:37] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[27/Jul/2019 21:33:37] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[27/Jul/2019 21:33:37] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[27/Jul/2019 21:33:37] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[27/Jul/2019 21:33:37] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[27/Jul/2019 21:33:37] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+[27/Jul/2019 21:33:37] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[27/Jul/2019 21:33:48] "GET /api/notes/ HTTP/1.1" 200 9145
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[27/Jul/2019 21:33:48] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[27/Jul/2019 21:33:50] "GET /api/ HTTP/1.1" 200 5335
+Not Found: //api/notes/
+[27/Jul/2019 21:34:31] "GET //api/notes/ HTTP/1.1" 404 2075
+Not Found: /favicon.ico
+[27/Jul/2019 21:34:31] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 21:34:43] "GET /api/notes/ HTTP/1.1" 200 9145
+[27/Jul/2019 21:34:43] "GET /api/notes/ HTTP/1.1" 200 9145
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:35:05] "POST /api/notes/ HTTP/1.1" 500 204616
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ exit
+exit
+(base) Winstons-Air:Intro-Django wel51x$ cat > a
+from rest_framework import serializers, viewsets
+from .models import PersonalNote
+
+class PersonalNoteSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = PersonalNote
+        fields = ('title', 'content')
+
+        def create(self, validated_data):
+            user = self.context['request'].user
+            note = PersonalNote.objects.create(user=user, **validated_data)
+            return note
+
+class PersonalNoteViewSet(viewsets.ModelViewSet):
+    serializer_class = PersonalNoteSerializer
+    queryset = PersonalNote.objects.all()
+^C
+(base) Winstons-Air:Intro-Django wel51x$ cat > b
+from rest_framework import serializers, viewsets
+from .models import PersonalNote
+
+class PersonalNoteSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = PersonalNote
+        fields = ('title', 'content')
+
+        def create(self, validated_data):
+            user = self.context['request'].user
+            note = PersonalNote.objects.create(user=user, **validated_data)
+            return note 
+
+class PersonalNoteViewSet(viewsets.ModelViewSet):
+    serializer_class = PersonalNoteSerializer
+    queryset = PersonalNote.objects.all()
+^C
+(base) Winstons-Air:Intro-Django wel51x$ diff a b
+13c13
+<             return note
+---
+>             return note 
+(base) Winstons-Air:Intro-Django wel51x$ rm a b
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:40:04
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:40:15] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4861
+[27/Jul/2019 21:40:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /api/notes/personalnote/
+[27/Jul/2019 21:40:24] "GET /api/notes/personalnote/ HTTP/1.1" 404 10347
+Not Found: /favicon.ico
+[27/Jul/2019 21:40:24] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 21:40:43] "GET /api/notes/ HTTP/1.1" 200 9145
+[27/Jul/2019 21:40:43] "GET /api/notes/ HTTP/1.1" 200 9145
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:41:06] "POST /api/notes/ HTTP/1.1" 500 204615
+[27/Jul/2019 21:41:18] "GET /admin/notes/personalnote/ HTTP/1.1" 200 4861
+[27/Jul/2019 21:41:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:41:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:41:22] "GET /admin/notes/personalnote/add/ HTTP/1.1" 200 5591
+[27/Jul/2019 21:41:22] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[27/Jul/2019 21:41:22] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[27/Jul/2019 21:41:22] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[27/Jul/2019 21:41:22] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[27/Jul/2019 21:41:50] "POST /admin/notes/personalnote/add/ HTTP/1.1" 302 0
+[27/Jul/2019 21:41:50] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5486
+[27/Jul/2019 21:41:50] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:41:50] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[27/Jul/2019 21:42:56] "GET /admin/notes/ HTTP/1.1" 200 2878
+Not Found: /favicon.ico
+[27/Jul/2019 21:42:56] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 21:42:58] "GET /admin/ HTTP/1.1" 200 5343
+[27/Jul/2019 21:43:02] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5207
+[27/Jul/2019 21:43:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 21:43:07] "GET /admin/ HTTP/1.1" 200 5343
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:43:13] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 21:43:13] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:43:14] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 21:43:21] "GET /api/notes/ HTTP/1.1" 200 9273
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:45:11] "POST /api/notes/ HTTP/1.1" 500 204039
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 21:55:15
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 21:55:41] "GET /admin/ HTTP/1.1" 200 5343
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /api/notes/ HTTP/1.1" 200 9273
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 21:55:50] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 21:56:22] "POST /api/notes/ HTTP/1.1" 500 204972
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 27, 2019 - 22:14:06
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[27/Jul/2019 22:14:12] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[27/Jul/2019 22:14:13] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[27/Jul/2019 22:14:13] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 22:14:21] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:14:28] "GET /api/ HTTP/1.1" 200 5301
+[27/Jul/2019 22:14:30] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:15:00] "GET /api/notes/personalnotes HTTP/1.1" 301 0
+Not Found: /api/notes/personalnotes/
+[27/Jul/2019 22:15:00] "GET /api/notes/personalnotes/ HTTP/1.1" 404 5628
+[27/Jul/2019 22:15:15] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:15:54] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+[27/Jul/2019 22:15:54] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[27/Jul/2019 22:15:55] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 22:16:18] "GET /api/ HTTP/1.1" 200 5335
+[27/Jul/2019 22:16:30] "GET /api/ HTTP/1.1" 200 5301
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 8192
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50600)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 54] Connection reset by peer
+----------------------------------------
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50602)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 54] Connection reset by peer
+----------------------------------------
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50603)
+Traceback (most recent call last):
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 8192
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50604)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+----------------------------------------
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+Exception happened during processing of request from ('127.0.0.1', 50605)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+----------------------------------------
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 8192
+ConnectionResetError: [Errno 54] Connection reset by peer
+Exception happened during processing of request from ('127.0.0.1', 50606)
+Traceback (most recent call last):
+----------------------------------------
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+----------------------------------------
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+Exception happened during processing of request from ('127.0.0.1', 50608)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+ConnectionResetError: [Errno 54] Connection reset by peer
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 8192
+----------------------------------------
+----------------------------------------
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+ConnectionResetError: [Errno 54] Connection reset by peer
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+----------------------------------------
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+Exception happened during processing of request from ('127.0.0.1', 50607)
+ConnectionResetError: [Errno 54] Connection reset by peer
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 54] Connection reset by peer
+----------------------------------------
+[27/Jul/2019 22:16:30] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50609)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+ConnectionResetError: [Errno 54] Connection reset by peer
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+----------------------------------------
+----------------------------------------
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+Exception happened during processing of request from ('127.0.0.1', 50610)
+ConnectionResetError: [Errno 54] Connection reset by peer
+----------------------------------------
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 54] Connection reset by peer
+----------------------------------------
+[27/Jul/2019 22:16:33] "GET /api/notes/ HTTP/1.1" 200 5743
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /api/notes/ HTTP/1.1" 200 9273
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[27/Jul/2019 22:17:58] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /api/notes/
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 213, in save
+    self.instance = self.create(validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/serializers.py", line 932, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 870, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/query.py", line 1186, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1335, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: notes_personalnote.user_id
+[27/Jul/2019 22:18:33] "POST /api/notes/ HTTP/1.1" 500 204960
+[27/Jul/2019 22:18:51] "GET /admin/ HTTP/1.1" 200 5343
+[27/Jul/2019 22:18:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:18:54] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5207
+[27/Jul/2019 22:18:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:18:57] "GET /admin/notes/personalnote/add/ HTTP/1.1" 200 5591
+[27/Jul/2019 22:19:02] "GET /admin/notes/note/ HTTP/1.1" 200 5410
+[27/Jul/2019 22:19:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:19:05] "GET /admin/notes/note/add/ HTTP/1.1" 200 5227
+[27/Jul/2019 22:19:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /favicon.ico
+[27/Jul/2019 22:19:05] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 22:19:43] "POST /admin/notes/note/add/ HTTP/1.1" 302 0
+[27/Jul/2019 22:19:43] "GET /admin/notes/note/ HTTP/1.1" 200 5994
+[27/Jul/2019 22:19:43] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:19:52] "GET /admin/ HTTP/1.1" 200 5701
+[27/Jul/2019 22:19:53] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:19:53] "GET /admin/notes/note/ HTTP/1.1" 200 5740
+[27/Jul/2019 22:19:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:19:56] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5207
+[27/Jul/2019 22:20:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:20:01] "GET /admin/notes/note/ HTTP/1.1" 200 5740
+[27/Jul/2019 22:20:03] "GET /admin/notes/note/d6b1c326-8364-49a3-b727-6317a6bf9378/change/ HTTP/1.1" 200 5653
+[27/Jul/2019 22:20:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:20:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[27/Jul/2019 22:20:10] "GET /admin/notes/note/b474120f-9c22-4fdd-a758-16da8393151a/change/ HTTP/1.1" 200 5631
+[27/Jul/2019 22:20:15] "GET /admin/notes/note/021eed11-4fb3-4b51-95b7-df88b5c8d54e/change/ HTTP/1.1" 200 5640
+[27/Jul/2019 22:20:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+Not Found: /favicon.ico
+[27/Jul/2019 22:20:15] "GET /favicon.ico HTTP/1.1" 404 2075
+[27/Jul/2019 22:20:20] "GET /admin/ HTTP/1.1" 200 5701
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/urls.py", line 23, in <module>
+    router.register(r'notes', PersonalNoteViewSet)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 75, in register
+    basename = self.get_default_basename(viewset)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 158, in get_default_basename
+    assert queryset is not None, '`basename` argument not specified, and could ' \
+AssertionError: `basename` argument not specified, and could not automatically determine the name from the viewset, as it does not have a `.queryset` attribute.
+
+^C(Intro-Django) bash-3.2$ vi notes/api.py
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/urls.py", line 23, in <module>
+    router.register(r'notes', PersonalNoteViewSet)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 75, in register
+    basename = self.get_default_basename(viewset)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 158, in get_default_basename
+    assert queryset is not None, '`basename` argument not specified, and could ' \
+AssertionError: `basename` argument not specified, and could not automatically determine the name from the viewset, as it does not have a `.queryset` attribute.
+
+^C(Intro-Django) bash-3.2$ exit
+exit
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 917, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 865, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/urls.py", line 23, in <module>
+    router.register(r'notes', PersonalNoteViewSet)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 75, in register
+    basename = self.get_default_basename(viewset)
+  File "/Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/lib/python3.7/site-packages/rest_framework/routers.py", line 158, in get_default_basename
+    assert queryset is not None, '`basename` argument not specified, and could ' \
+AssertionError: `basename` argument not specified, and could not automatically determine the name from the viewset, as it does not have a `.queryset` attribute.
+
+^C(Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   notes/api.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Winstons-Air:Intro-Django wel51x$ git add .
+(base) Winstons-Air:Intro-Django wel51x$ git commit -m "Day 3 I give up - can't get any of this shit to work
+> 
+(base) Winstons-Air:Intro-Django wel51x$ git commit -m "Day 3 I give up - can't get any of this shit to work"
+[master 9191035] Day 3 I give up - can't get any of this shit to work
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+(base) Winstons-Air:Intro-Django wel51x$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 595 bytes | 595.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/wel51x/Intro-Django
+   cc9625b..9191035  master -> master
+(base) Winstons-Air:Intro-Django wel51x$ ls -lsa
