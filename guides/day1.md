@@ -323,7 +323,7 @@ development machine, without modifying the source code.
 Don’t forget to add it to `.env` as well.
 
 Test to make sure it still works and debug as needed.
-==>> would be nice if asshole Lambda showed us how to debug!!
+==>> would be nice if Lambda was kind enough to show us how to debug!!
 
 Before moving on, verify that `.env` is in `.gitignore` and commit.
 

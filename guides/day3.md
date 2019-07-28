@@ -182,7 +182,7 @@ In `api.py`, `PersonalNoteSerializer`:
 But we need to add the `user` field into the mix. If the user is logged in to
 Django through this browser, that information is automatically included in the
 request... but where? Let's use the debugger to explore and find out.
-==>> would be nice if asshole Lambda showed us how to debug!!
+==>> would be nice if Lambda was kind enough to show us how to run the debugger!!
 
 In `api.py`, `PersonalNoteSerializer`:
 
@@ -269,5 +269,5 @@ After installation (_follow the instructions at the link, above!_), setting:
 CORS_ORIGIN_ALLOW_ALL = True
 ```
 
-should be enough.
+should be enough. <<== WHERE, pray tell?
 
