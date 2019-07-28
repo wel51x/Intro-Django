@@ -1,0 +1,163 @@
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): authtoken.
+Run 'python manage.py migrate' to apply them.
+
+July 28, 2019 - 03:42:17
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(Intro-Django) bash-3.2./manage.py makemigrations
+No changes detected
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, authtoken, contenttypes, notes, sessions
+Running migrations:
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:43:18
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[28/Jul/2019 03:43:29] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[28/Jul/2019 03:43:30] "GET /admin/notes/note/ HTTP/1.1" 200 6400
+[28/Jul/2019 03:43:33] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[28/Jul/2019 03:43:34] "GET /admin/notes/personalnote/ HTTP/1.1" 200 5899
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:41] "GET /api/ HTTP/1.1" 200 5335
+[28/Jul/2019 03:43:42] "GET /api/ HTTP/1.1" 200 5335
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[28/Jul/2019 03:43:42] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[28/Jul/2019 03:43:45] "GET /api/notes/ HTTP/1.1" 200 9563
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:45:03
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[28/Jul/2019 03:45:32] "GET /api/notes/ HTTP/1.1" 200 9563
+[28/Jul/2019 03:46:20] "POST /api/notes/ HTTP/1.1" 201 9052
+[28/Jul/2019 03:46:26] "GET /api/notes/ HTTP/1.1" 200 9712
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:51:04
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/djorg/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:51:06
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django/notes/api.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:51:12
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(Intro-Django) bash-3.2$ ./manage.py makemigrations
+No changes detected
+(Intro-Django) bash-3.2$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, authtoken, contenttypes, notes, sessions
+Running migrations:
+  No migrations to apply.
+(Intro-Django) bash-3.2$ # The following makes a POST request with the given JSON payload:
+(Intro-Django) bash-3.2$ curl -X POST -H "Content-Type: application/json" -d '{"username":"admin", "password":"PASSWORD"}' http://127.0.0.1:8000/api-token-auth/
+curl: (7) Failed to connect to 127.0.0.1 port 8000: Connection refused
+(Intro-Django) bash-3.2$ ./manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 28, 2019 - 03:55:22
+Django version 2.2.3, using settings 'djorg.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Bad Request: /api-token-auth/
+[28/Jul/2019 03:58:50] "POST /api-token-auth/ HTTP/1.1" 400 68
+[28/Jul/2019 03:59:38] "POST /api-token-auth/ HTTP/1.1" 200 52
+[28/Jul/2019 04:00:28] "GET /api/notes/ HTTP/1.1" 200 421
+^C(Intro-Django) bash-3.2$ exit
+
+==============================
+In separate terminal session:
+==============================
+
+Last login: Sat Jul 27 22:55:35 on ttys003
+(reverse-i-search)`Dj':  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(base) Winstons-Air:Intro-Django wel51x$ cd /Users/wel51x/GDrive/Lambda/CS13/BuildWeek/Intro-Django
+(base) Winstons-Air:Intro-Django wel51x$ pipenv shell
+Loading .env environment variables…
+Launching subshell in virtual environment…
+bash-3.2$  . /Users/wel51x/.local/share/virtualenvs/Intro-Django-bfahAMFY/bin/activate
+(Intro-Django) bash-3.2$ # The following makes a POST request with the given JSON payload:
+(Intro-Django) bash-3.2$ curl -X POST -H "Content-Type: application/json" -d '{"username":"admin", "password":"PASSWORD"}' http://127.0.0.1:8000/api-token-auth/
+{"non_field_errors":["Unable to log in with provided credentials."]}(Intro-Django) bash-3.2$ curl -X POST -H "Content-Type: application/json" -d '{"username":"admin", "password":"UpYoursDouchebag"' http://127.0.0.1:8000/api-token-auth/
+{"token":"99e6ff902f87f453ded88d793b3fd66149e958fe"}(Intro-Django) bash-3.2$ curl -v -H 'Authorization: Token 99e6ff902f87f453ded88d793b3fd66149e958fe' http://127.0.0.1:8000/api/notes/
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 8000 (#0)
+> GET /api/notes/ HTTP/1.1
+> Host: 127.0.0.1:8000
+> User-Agent: curl/7.63.0
+> Accept: */*
+> Authorization: Token 99e6ff902f87f453ded88d793b3fd66149e958fe
+> 
+< HTTP/1.1 200 OK
+< Date: Sun, 28 Jul 2019 04:00:28 GMT
+< Server: WSGIServer/0.2 CPython/3.7.3
+< Content-Type: application/json
+< Vary: Accept, Origin, Cookie
+< Allow: GET, POST, HEAD, OPTIONS
+< X-Frame-Options: SAMEORIGIN
+< Content-Length: 421
+< 
+* Connection #0 to host 127.0.0.1 left intact
+[{"title":"FoistPoizonalNote","content":"Diz iz my first Personal Note"},{"title":"SecondPersonalNote","content":"Yet another Personal Note"},{"title":"ThoidPoizonalNote","content":"And another one"},{"title":"FoithPoizonalNote","content":"One mo' time yes yes"},{"title":"FifthPersonalNote","content":"S'io credesse che mia risposta fosse"},{"title":"SixthPersonalNote","content":"A persona che mai tornasse al mondo,"}](Intro-Django) bash-3.2$ exit
+(base) Winstons-Air:Intro-Django wel51x$ 
