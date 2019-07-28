@@ -48,7 +48,7 @@ The `^` is means "match the beginning of the string" in a regular expression.
 The `re_path` function is just like `path`, except it interprets the endpoint as
 a regex instead of a fixed string.
 
-Do a migration to set up the database.
+Do a migration to set up the database. <<== A little help, please. Nothing happened.
 
 ## Test the Endpoint
 
